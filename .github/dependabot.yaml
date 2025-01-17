@@ -1,0 +1,23 @@
+version: 2
+enable-beta-ecosystems: true
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/nfc_antenna_info_flutter"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/nfc_antenna_info_flutter/example"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/nfc_antenna_info_flutter_platform_interface"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/nfc_antenna_info_flutter_android"
+    schedule:
+      interval: "daily"

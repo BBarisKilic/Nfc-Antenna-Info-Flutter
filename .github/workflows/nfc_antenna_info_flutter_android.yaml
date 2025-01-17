@@ -1,0 +1,29 @@
+name: nfc_antenna_info_flutter_android
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/nfc_antenna_info_flutter_android.yaml"
+      - "nfc_antenna_info_flutter_android/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/nfc_antenna_info_flutter_android.yaml"
+      - "nfc_antenna_info_flutter_android/**"
+
+jobs:
+  build:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    with:
+      flutter_channel: stable
+      flutter_version: 3.24.0
+      working_directory: nfc_antenna_info_flutter_android
+
+  pana:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
+

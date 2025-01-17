@@ -1,0 +1,28 @@
+name: nfc_antenna_info_flutter_android
+description: Android implementation of the nfc_antenna_info_flutter plugin
+version: 0.1.0+1
+
+
+environment:
+  sdk: ^3.5.0
+
+flutter:
+  plugin:
+    implements: nfc_antenna_info_flutter
+    platforms:
+      android:
+        package: com.bbkdevelopment
+        pluginClass: NfcAntennaInfoFlutterPlugin
+        dartPluginClass: NfcAntennaInfoFlutterAndroid
+
+dependencies:
+  flutter:
+    sdk: flutter
+  nfc_antenna_info_flutter_platform_interface:
+    path: ../nfc_antenna_info_flutter_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.8
+  very_good_analysis: ^6.0.0

@@ -1,0 +1,17 @@
+name: nfc_antenna_info_flutter_platform_interface
+description: A common platform interface for the nfc_antenna_info_flutter plugin.
+version: 0.1.0+1
+
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
