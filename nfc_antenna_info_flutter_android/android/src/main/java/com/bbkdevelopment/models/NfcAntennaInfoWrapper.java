@@ -3,6 +3,7 @@ package com.bbkdevelopment.models;
 import android.nfc.NfcAntennaInfo;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
+import com.bbkdevelopment.exceptions.NfcUnavailableException;
 import com.bbkdevelopment.exceptions.UnsupportedFeatureException;
 import java.util.HashMap;
 import java.util.List;
@@ -43,6 +44,8 @@ public final class NfcAntennaInfoWrapper {
    * Converts the NfcAntennaInfo object to a map.
    *
    * @return The map representation of the NfcAntennaInfo object.
+   * @throws NfcUnavailableException     If NFC is not supported on the device.
+   * @throws UnsupportedFeatureException If the feature is not supported on the device.
    */
   public Map<String, Object> toMap() {
     if (nfcAntennaInfo == null) {
@@ -58,6 +61,10 @@ public final class NfcAntennaInfoWrapper {
         .map(antenna -> new AvailableNfcAntennaWrapper(antenna).toMap())
         .filter(Objects::nonNull)
         .collect(Collectors.toList());
+    if (availableNfcAntennaMaps.isEmpty()) {
+      throw new NfcUnavailableException();
+    }
+
     final Map<String, Object> nfcAntennaInfoMap = new HashMap<>();
     nfcAntennaInfoMap.put(DEVICE_WIDTH, nfcAntennaInfo.getDeviceWidth());
     nfcAntennaInfoMap.put(DEVICE_HEIGHT, nfcAntennaInfo.getDeviceHeight());

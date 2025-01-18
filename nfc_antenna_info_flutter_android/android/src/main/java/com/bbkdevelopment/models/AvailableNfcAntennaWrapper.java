@@ -34,6 +34,7 @@ public final class AvailableNfcAntennaWrapper {
    * Converts the AvailableNfcAntenna object to a map.
    *
    * @return The map representation of the AvailableNfcAntenna object.
+   * @throws UnsupportedFeatureException If the feature is not supported on the device.
    */
   public Map<String, Object> toMap() {
     if (availableNfcAntenna == null) {
@@ -42,7 +43,7 @@ public final class AvailableNfcAntennaWrapper {
     if (VERSION.SDK_INT < VERSION_CODES.UPSIDE_DOWN_CAKE) {
       throw new UnsupportedFeatureException();
     }
-    
+
     final Map<String, Object> availableNfcAntennaMap = new HashMap<>();
     availableNfcAntennaMap.put(LOCATION_X, availableNfcAntenna.getLocationX());
     availableNfcAntennaMap.put(LOCATION_Y, availableNfcAntenna.getLocationY());

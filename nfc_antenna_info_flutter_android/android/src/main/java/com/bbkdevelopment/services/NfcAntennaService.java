@@ -21,6 +21,9 @@ public final class NfcAntennaService {
    *
    * @param context The context of the application.
    * @return The NFC antenna information if available, otherwise null.
+   * @throws NfcAntennaInfoFlutterPluginException If an error occurs while retrieving the NFC
+   *                                              adapter.
+   * @throws NfcUnavailableException              If NFC is not supported on the device.
    */
   public NfcAntennaInfo getNfcAntennaInfo(Context context) {
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
