@@ -14,5 +14,4 @@ public final class NfcDisabledException extends NfcAntennaInfoFlutterPluginExcep
   public NfcDisabledException() {
     super(NFC_DISABLED_MESSAGE, "3");
   }
-
 }

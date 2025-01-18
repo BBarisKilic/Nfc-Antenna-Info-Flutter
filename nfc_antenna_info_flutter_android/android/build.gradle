@@ -20,6 +20,7 @@ allprojects {
 }
 
 apply plugin: "com.android.library"
+apply plugin: "checkstyle"
 
 android {
     if (project.android.hasProperty("namespace")) {
@@ -51,3 +52,36 @@ android {
         }
     }
 }
+
+checkstyle {
+    toolVersion = "10.21.1"
+    ignoreFailures = false
+}
+
+tasks.register('checkstyleGoogleCheck', Checkstyle) {
+    configFile = file("config/checkstyle/google_checks.xml")
+    source 'src/main/java'
+    include '**/*.java'
+    exclude '**/generated/**'
+    classpath = files()
+}
+
+tasks.register('checkstyleBBKCheck', Checkstyle) {
+    configFile = file("config/checkstyle/bbk_checks.xml")
+    source 'src/main/java'
+    include '**/*.java'
+    exclude '**/generated/**'
+    classpath = files()
+}
+
+tasks.withType(Checkstyle).configureEach {
+    reports {
+        xml.required = false
+        html.required = true
+        html.stylesheet = resources.text.fromFile("config/xsl/checkstyle-author.xsl")
+    }
+    maxWarnings = 0
+}
+
+check.dependsOn checkstyleGoogleCheck, checkstyleBBKCheck
+build.dependsOn checkstyleGoogleCheck, checkstyleBBKCheck
