@@ -30,7 +30,8 @@ void main() {
     tearDown(log.clear);
 
     test('getPlatformName', () async {
-      final platformName = await methodChannelNfcAntennaInfoFlutter.getPlatformName();
+      final platformName =
+          await methodChannelNfcAntennaInfoFlutter.getPlatformName();
       expect(
         log,
         <Matcher>[isMethodCall('getPlatformName', arguments: null)],

@@ -1,6 +1,7 @@
 import 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart';
 
-NfcAntennaInfoFlutterPlatform get _platform => NfcAntennaInfoFlutterPlatform.instance;
+NfcAntennaInfoFlutterPlatform get _platform =>
+    NfcAntennaInfoFlutterPlatform.instance;
 
 /// Returns the name of the current platform.
 Future<String> getPlatformName() async {

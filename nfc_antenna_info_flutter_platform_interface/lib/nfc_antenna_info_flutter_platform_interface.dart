@@ -14,7 +14,8 @@ abstract class NfcAntennaInfoFlutterPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static NfcAntennaInfoFlutterPlatform _instance = MethodChannelNfcAntennaInfoFlutter();
+  static NfcAntennaInfoFlutterPlatform _instance =
+      MethodChannelNfcAntennaInfoFlutter();
 
   /// The default instance of [NfcAntennaInfoFlutterPlatform] to use.
   ///
