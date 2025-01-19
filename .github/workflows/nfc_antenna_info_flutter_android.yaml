@@ -53,9 +53,14 @@ jobs:
           ./gradlew dependencies
         working-directory: nfc_antenna_info_flutter_android/android
 
-      - name: Run Checkstyle
+      - name: Run Checkstyle for Google Checks
         run: |
-          ./gradlew check
+          ./gradlew checkstyleGoogleCheck
+        working-directory: nfc_antenna_info_flutter_android/android
+
+      - name: Run Checkstyle for BBK Checks
+        run: |
+          ./gradlew checkstyleBBKCheck
         working-directory: nfc_antenna_info_flutter_android/android
 
       - name: Fail on Checkstyle issues
