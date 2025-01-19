@@ -27,3 +27,36 @@ jobs:
   pana:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
 
+  checkstyle:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '1.8'
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle/caches
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            gradle-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: |
+          ./gradlew dependencies
+
+      - name: Run Checkstyle
+        run: |
+          ./gradlew checkstyleCheck
+
+      - name: Fail on Checkstyle issues
+        if: failure()
+        run: |
+          echo "Checkstyle failed. Please fix the issues and try again."
+          exit 1  # Exits with non-zero status, causing the pipeline to fail
