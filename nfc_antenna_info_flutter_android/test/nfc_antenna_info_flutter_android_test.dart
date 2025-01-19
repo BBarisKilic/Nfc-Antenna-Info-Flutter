@@ -30,8 +30,10 @@ void main() {
 
     test('can be registered', () {
       NfcAntennaInfoFlutterAndroid.registerWith();
-      expect(NfcAntennaInfoFlutterPlatform.instance,
-          isA<NfcAntennaInfoFlutterAndroid>());
+      expect(
+        NfcAntennaInfoFlutterPlatform.instance,
+        isA<NfcAntennaInfoFlutterAndroid>(),
+      );
     });
 
     test('getPlatformName returns correct name', () async {

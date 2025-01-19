@@ -8,7 +8,8 @@ class NfcAntennaInfoFlutterAndroid extends NfcAntennaInfoFlutterPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('nfc_antenna_info_flutter_android');
 
-  /// Registers this class as the default instance of [NfcAntennaInfoFlutterPlatform]
+  /// Registers this class as the default instance of
+  /// [NfcAntennaInfoFlutterPlatform].
   static void registerWith() {
     NfcAntennaInfoFlutterPlatform.instance = NfcAntennaInfoFlutterAndroid();
   }

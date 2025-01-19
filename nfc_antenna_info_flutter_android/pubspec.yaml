@@ -1,7 +1,7 @@
 name: nfc_antenna_info_flutter_android
 description: Android implementation of the nfc_antenna_info_flutter plugin
 version: 0.1.0+1
-
+publish_to: 'none'
 
 environment:
   sdk: ^3.5.0
