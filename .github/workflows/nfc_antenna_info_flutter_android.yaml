@@ -48,13 +48,27 @@ jobs:
           restore-keys: |
             gradle-${{ runner.os }}-
 
+      - name: List Directory 1
+        run: ls -la
+        working-directory: nfc_antenna_info_flutter_android
+
+      - name: List Directory 12
+        run: ls -la
+        working-directory: nfc_antenna_info_flutter_android/android
+
+      - name: List Directory 13
+        run: ls -la
+        working-directory: android
+
       - name: Install dependencies
         run: |
           ./gradlew dependencies
+        working-directory: android
 
       - name: Run Checkstyle
         run: |
           ./gradlew check
+        working-directory: android
 
       - name: Fail on Checkstyle issues
         if: failure()
