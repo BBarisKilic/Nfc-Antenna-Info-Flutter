@@ -26,4 +26,6 @@ jobs:
 
   pana:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
+    with:
+      working_directory: nfc_antenna_info_flutter_platform_interface
 

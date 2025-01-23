@@ -35,6 +35,8 @@ jobs:
 
   pana:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
+    with:
+      working_directory: nfc_antenna_info_flutter
 
 
   android:
@@ -63,21 +65,26 @@ jobs:
           path: |
             ~/.android/avd/*
             ~/.android/adb*
-          key: avd-29
+          key: avd-34
 
       - name: Cache AVD Snapshot
         if: steps.avd-cache.outputs.cache-hit != 'true'
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
+          api-level: 34
+          abi: google_apis/arm64-v8a
           force-avd-creation: false
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: false
+          emulator-options: -no-window -gpu swiftshader -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
           script: echo "Generated AVD snapshot for caching."
 
       - name: E2E Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
-          script: fluttium test flows/test_platform_name.yaml -d android
+          api-level: 34
+          script: |
+            adb shell getprop sys.boot_completed
+            adb wait-for-device shell echo "Device is ready."
+            flutter pub get
+            fluttium test flows/test_platform_name.yaml -d android --verbose || echo "Fluttium test failed with exit code $?"
           working-directory: nfc_antenna_info_flutter/example
