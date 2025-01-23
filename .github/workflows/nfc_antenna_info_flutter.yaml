@@ -72,8 +72,6 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 34
-          target: google_apis
-          arch: x86_64
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader -noaudio -no-boot-anim -camera-back none
           disable-animations: true
@@ -83,8 +81,6 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 34
-          target: google_apis
-          arch: x86_64
           script: |
             adb shell getprop sys.boot_completed
             adb wait-for-device shell echo "Device is ready."
