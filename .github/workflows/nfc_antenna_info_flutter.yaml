@@ -91,5 +91,5 @@ jobs:
           arch: x86_64
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          script: fluttium test flows/test_platform_name.yaml -d android --verbose
+          script: fluttium test flows/test_platform_name.yaml -d android
           working-directory: nfc_antenna_info_flutter/example
