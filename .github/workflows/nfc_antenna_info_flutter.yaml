@@ -55,14 +55,14 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter_channel: stable
-          flutter_version: 3.24.0
+          flutter-version: '3.24.0'
+          channel: 'stable'
           cache: true
 
       - name: Install dependencies
         run: |
-            flutter pub get
             flutter clean
+            flutter pub get
 
       - name: Install Fluttium
         run: flutter pub global activate fluttium_cli
@@ -100,10 +100,6 @@ jobs:
           arch: x86_64
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          script: |
-            flutter devices
-            export FLUTTER_DRIVER_WAIT_TIMEOUT=120000
-            fluttium test flows/test_platform_name.yaml -d android --verbose
+          script: fluttium test flows/test_platform_name.yaml -d android
           working-directory: nfc_antenna_info_flutter/example
-        env:
-          FLUTTER_DRIVER_WAIT_TIMEOUT: 120000
+

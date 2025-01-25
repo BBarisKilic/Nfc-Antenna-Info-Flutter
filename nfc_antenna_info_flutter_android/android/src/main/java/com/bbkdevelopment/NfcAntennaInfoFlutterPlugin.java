@@ -2,7 +2,6 @@ package com.bbkdevelopment;
 
 import android.content.Context;
 import android.nfc.NfcAntennaInfo;
-import android.os.Build;
 import androidx.annotation.NonNull;
 import com.bbkdevelopment.constants.CallMethods;
 import com.bbkdevelopment.exceptions.NfcAntennaInfoFlutterPluginException;
@@ -71,7 +70,7 @@ public class NfcAntennaInfoFlutterPlugin implements FlutterPlugin, MethodCallHan
    * @param result The result to send back to the Flutter app.
    */
   private void handleGetPlatformNameRequest(Result result) {
-    result.success("Android " + Build.VERSION.RELEASE);
+    result.success("Android");
   }
 
   /**
