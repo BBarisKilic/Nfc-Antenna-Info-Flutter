@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:nfc_antenna_info_flutter_platform_interface/src/method_channel_nfc_antenna_info_flutter.dart';
+import 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -17,12 +17,10 @@ void main() {
         methodChannelNfcAntennaInfoFlutter.methodChannel,
         (methodCall) async {
           log.add(methodCall);
-          switch (methodCall.method) {
-            case 'getPlatformName':
-              return kPlatformName;
-            default:
-              return null;
-          }
+          return switch (methodCall.method) {
+            'getPlatformName' => kPlatformName,
+            _ => null,
+          };
         },
       );
     });
@@ -36,7 +34,7 @@ void main() {
         log,
         <Matcher>[isMethodCall('getPlatformName', arguments: null)],
       );
-      expect(platformName, equals(kPlatformName));
+      expect(platformName, equals(const NfcDataSuccess(kPlatformName)));
     });
   });
 }
