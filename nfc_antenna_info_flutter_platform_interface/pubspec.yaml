@@ -7,11 +7,16 @@ environment:
   sdk: ^3.5.0
 
 dependencies:
+  # A package that helps to implement value based equality.
+  equatable: ^2.0.7
   flutter:
     sdk: flutter
+  # A package that provides annotations for expressing developer intentions that cannot be inferred
+  # through static code analysis.
+  meta: ^1.15.0
   plugin_platform_interface: ^2.1.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  very_good_analysis: ^6.0.0
+  very_good_analysis: ^7.0.0

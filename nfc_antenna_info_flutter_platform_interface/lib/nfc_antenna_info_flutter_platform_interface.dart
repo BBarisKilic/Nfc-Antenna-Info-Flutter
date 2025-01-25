@@ -1,5 +1,9 @@
 import 'package:nfc_antenna_info_flutter_platform_interface/src/method_channel_nfc_antenna_info_flutter.dart';
+import 'package:nfc_antenna_info_flutter_platform_interface/src/models/models.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+
+export 'src/method_channel_nfc_antenna_info_flutter.dart';
+export 'src/models/models.dart';
 
 /// The interface that implementations of nfc_antenna_info_flutter must
 /// implement.
@@ -32,6 +36,9 @@ abstract class NfcAntennaInfoFlutterPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  /// Return the current platform name.
-  Future<String?> getPlatformName();
+  /// Return the current platform name wrapped in a [NfcDataState].
+  Future<NfcDataState<String>> getPlatformName();
+
+  /// Return the NFC antenna information wrapped in a [NfcDataState].
+  Future<NfcDataState<NfcAntennaResponse>> getNfcAntennaInfo();
 }

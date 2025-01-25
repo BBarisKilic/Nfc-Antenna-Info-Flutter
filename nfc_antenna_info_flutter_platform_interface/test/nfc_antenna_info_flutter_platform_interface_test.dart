@@ -5,7 +5,13 @@ class NfcAntennaInfoFlutterMock extends NfcAntennaInfoFlutterPlatform {
   static const mockPlatformName = 'Mock';
 
   @override
-  Future<String?> getPlatformName() async => mockPlatformName;
+  Future<NfcDataState<String>> getPlatformName() async =>
+      const NfcDataSuccess(mockPlatformName);
+
+  @override
+  Future<NfcDataState<NfcAntennaResponse>> getNfcAntennaInfo() {
+    throw UnimplementedError();
+  }
 }
 
 void main() {
