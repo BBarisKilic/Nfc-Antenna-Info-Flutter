@@ -28,7 +28,9 @@ void main() {
       test('returns correct name', () async {
         expect(
           await NfcAntennaInfoFlutterPlatform.instance.getPlatformName(),
-          equals(NfcAntennaInfoFlutterMock.mockPlatformName),
+          equals(
+            const NfcDataSuccess(NfcAntennaInfoFlutterMock.mockPlatformName),
+          ),
         );
       });
     });
