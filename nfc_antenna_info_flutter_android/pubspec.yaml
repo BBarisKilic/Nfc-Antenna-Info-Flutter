@@ -18,6 +18,9 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
+  # A package that provides annotations for expressing developer intentions that cannot be inferred
+  # through static code analysis.
+  meta: ^1.15.0
   nfc_antenna_info_flutter_platform_interface:
     path: ../nfc_antenna_info_flutter_platform_interface
 

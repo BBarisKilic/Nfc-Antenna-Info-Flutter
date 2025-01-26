@@ -42,7 +42,7 @@ void main() {
         log,
         <Matcher>[isMethodCall('getPlatformName', arguments: null)],
       );
-      expect(name, equals(kPlatformName));
+      expect(name, equals(const NfcDataSuccess(kPlatformName)));
     });
   });
 }

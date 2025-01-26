@@ -2,14 +2,18 @@ import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 import 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart';
 
-/// An implementation of [NfcAntennaInfoFlutterPlatform] that uses method
-/// channels.
-final class MethodChannelNfcAntennaInfoFlutter
-    extends NfcAntennaInfoFlutterPlatform {
+/// The Android implementation of [NfcAntennaInfoFlutterPlatform].
+final class NfcAntennaInfoFlutterAndroid extends NfcAntennaInfoFlutterPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel =
-      const MethodChannel(MethodChannels.nfcAntennaInfoFlutter);
+      const MethodChannel(MethodChannels.nfcAntennaInfoFlutterAndroid);
+
+  /// Registers this class as the default instance of
+  /// [NfcAntennaInfoFlutterPlatform].
+  static void registerWith() {
+    NfcAntennaInfoFlutterPlatform.instance = NfcAntennaInfoFlutterAndroid();
+  }
 
   @override
   Future<NfcDataState<String>> getPlatformName() async {
@@ -26,7 +30,7 @@ final class MethodChannelNfcAntennaInfoFlutter
       return NfcDataFailure(NfcFailure(e.code, message: e.message, details: e));
     } on MissingPluginException catch (e) {
       return NfcDataFailure(
-        NfcFailure('1', message: 'Platform is not supported', details: e),
+        NfcFailure('1', message: 'Android is not supported', details: e),
       );
     }
   }
@@ -46,7 +50,7 @@ final class MethodChannelNfcAntennaInfoFlutter
       return NfcDataFailure(NfcFailure(e.code, message: e.message, details: e));
     } on MissingPluginException catch (e) {
       return NfcDataFailure(
-        NfcFailure('1', message: 'Platform is not supported', details: e),
+        NfcFailure('1', message: 'Android is not supported', details: e),
       );
     }
   }

@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
 import 'package:nfc_antenna_info_flutter_platform_interface/src/models/nfc_antenna.dart';
 
 /// {@template nfc_antenna_response}
@@ -16,14 +15,20 @@ class NfcAntennaResponse extends Equatable {
   });
 
   /// Converts the [Map] to an [NfcAntennaResponse].
-  @internal
   factory NfcAntennaResponse.fromMap(Map<String, dynamic> map) {
     return NfcAntennaResponse(
       deviceWidth: map['deviceWidth'] as int,
       deviceHeight: map['deviceHeight'] as int,
       deviceFoldable: map['deviceFoldable'] as bool,
       availableNfcAntennas: (map['availableNfcAntennas'] as List)
-          .map((e) => NfcAntenna.fromMap(e as Map<String, dynamic>))
+          .map(
+            (e) => switch (e) {
+              final Map<dynamic, dynamic> map =>
+                NfcAntenna.fromMap(map.cast<String, dynamic>()),
+              _ => null,
+            },
+          )
+          .nonNulls
           .toList(),
     );
   }
