@@ -13,10 +13,12 @@ void main() {
 
   group('NfcAntennaInfoFlutter', () {
     late NfcAntennaInfoFlutterPlatform nfcAntennaInfoFlutterPlatform;
+    late NfcAntennaInfo nfcAntennaInfo;
 
     setUp(() {
       nfcAntennaInfoFlutterPlatform = MockNfcAntennaInfoFlutterPlatform();
       NfcAntennaInfoFlutterPlatform.instance = nfcAntennaInfoFlutterPlatform;
+      nfcAntennaInfo = const NfcAntennaInfo();
     });
 
     group('getPlatformName', () {
@@ -25,9 +27,9 @@ void main() {
         const platformName = '__test_platform__';
         when(
           () => nfcAntennaInfoFlutterPlatform.getPlatformName(),
-        ).thenAnswer((_) async => platformName);
+        ).thenAnswer((_) async => const NfcDataSuccess(platformName));
 
-        final actualPlatformName = await getPlatformName();
+        final actualPlatformName = await nfcAntennaInfo.getPlatformName();
         expect(actualPlatformName, equals(platformName));
       });
 
@@ -35,9 +37,9 @@ void main() {
           () async {
         when(
           () => nfcAntennaInfoFlutterPlatform.getPlatformName(),
-        ).thenAnswer((_) async => null);
+        ).thenAnswer((_) async => NfcDataFailure(any()));
 
-        expect(getPlatformName, throwsException);
+        expect(nfcAntennaInfo.getPlatformName, throwsException);
       });
     });
   });

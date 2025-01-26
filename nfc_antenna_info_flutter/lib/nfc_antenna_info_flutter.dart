@@ -1,11 +1,15 @@
-import 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart';
+// Copyright 2025 BBK Development. All rights reserved.
+// Use of this source code is governed by a BSD 3-Clause-style license that can
+// be found in the LICENSE file.
 
-NfcAntennaInfoFlutterPlatform get _platform =>
-    NfcAntennaInfoFlutterPlatform.instance;
+/// A Flutter plugin to get the NFC antenna information on Android. Provided
+/// information makes it possible to locate the NFC antenna on the device.
+///
+/// This plugin is currently supporting on Android and requires minimum Android
+/// API level 34 (Android 14 - Upside Down Cake).
+///
+/// Get started at [https://pub.dev/packages/nfc_antenna_info_flutter].
+library nfc_antenna_info_flutter;
 
-/// Returns the name of the current platform.
-Future<String> getPlatformName() async {
-  final platformName = await _platform.getPlatformName();
-  if (platformName == null) throw Exception('Unable to get platform name.');
-  return platformName;
-}
+export 'src/exceptions/exceptions.dart';
+export 'src/nfc_antenna_info.dart';

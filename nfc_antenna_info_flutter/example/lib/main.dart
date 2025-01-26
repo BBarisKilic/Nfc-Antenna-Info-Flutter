@@ -42,7 +42,9 @@ class _HomePageState extends State<HomePage> {
               onPressed: () async {
                 if (!context.mounted) return;
                 try {
-                  final result = await getPlatformName();
+                  const a = NfcAntennaInfo();
+                  final result = await a.getPlatformName();
+                  final b = await a.getNfcAntennaInfo();
                   setState(() => _platformName = result);
                 } catch (error) {
                   if (!context.mounted) return;
