@@ -52,11 +52,6 @@ class _HomePageState extends State<HomePage> {
             child: FutureBuilder(
               future: nfcAntennaInfo.getNfcAntennaInfo(),
               builder: (context, snapshot) {
-                if (!snapshot.hasData) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
                 if (snapshot.hasError) {
                   WidgetsBinding.instance.addPostFrameCallback((_) {
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -66,6 +61,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   });
+                }
+                if (!snapshot.hasData) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
                 }
 
                 final deviceHeight = snapshot.data!.deviceHeight;
