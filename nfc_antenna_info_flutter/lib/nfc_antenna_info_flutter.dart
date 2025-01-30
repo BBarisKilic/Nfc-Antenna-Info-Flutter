@@ -11,5 +11,8 @@
 /// Get started at [https://pub.dev/packages/nfc_antenna_info_flutter].
 library nfc_antenna_info_flutter;
 
+export 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart'
+    show NfcAntenna, NfcAntennaResponse;
+
 export 'src/exceptions/exceptions.dart';
 export 'src/nfc_antenna_info.dart';
