@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:nfc_antenna_info_flutter_platform_interface/src/models/nfc_antenna.dart';
+import 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart';
 
 /// {@template nfc_antenna_response}
 /// A response containing information about the [NfcAntenna]s available on the

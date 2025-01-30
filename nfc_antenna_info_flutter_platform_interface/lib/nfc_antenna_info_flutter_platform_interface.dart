@@ -1,5 +1,4 @@
-import 'package:nfc_antenna_info_flutter_platform_interface/src/method_channel_nfc_antenna_info_flutter.dart';
-import 'package:nfc_antenna_info_flutter_platform_interface/src/models/models.dart';
+import 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 export 'src/constants/constants.dart';
@@ -36,9 +35,26 @@ abstract class NfcAntennaInfoFlutterPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  /// Return the current platform name wrapped in a [NfcDataState].
+  /// When success returns the platform name as [String] wrapped in a
+  /// [NfcDataSuccess].
+  ///
+  /// In case of failure returns a [NfcFailure] with the error code and other
+  /// details wrapped in a [NfcDataFailure].
+  ///
+  /// Possible error codes and their possible meanings:
+  /// - `1`: Failed to get platform name.
   Future<NfcDataState<String>> getPlatformName();
 
-  /// Return the NFC antenna information wrapped in a [NfcDataState].
+  /// When success returns the NFC antenna info as [NfcAntennaResponse] wrapped
+  /// in a [NfcDataSuccess].
+  ///
+  /// In case of failure returns a [NfcFailure] with the error code and other
+  /// details wrapped in a [NfcDataFailure].
+  ///
+  /// Possible error codes and their possible meanings:
+  /// - `1`: The new NFC API to get the NFC antenna info is not supported on
+  /// this device.
+  /// - `2`: NFC is not supported on this device.
+  /// - `3`: NFC is not enabled on this device.
   Future<NfcDataState<NfcAntennaResponse>> getNfcAntennaInfo();
 }
