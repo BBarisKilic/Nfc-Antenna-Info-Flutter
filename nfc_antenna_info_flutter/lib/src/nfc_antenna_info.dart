@@ -16,58 +16,39 @@ final class NfcAntennaInfo {
   /// Returns `String` representing the platform name.
   ///
   /// Throws:
-  /// - [UnsupportedNfcFeatureException] if the platform does not support NFC.
-  /// - [UnknownNfcException] if the unknown platform error occurs.
+  /// - [UnsupportedFeatureException] if the platform does not support feature.
   @visibleForTesting
   Future<String> getPlatformName() async {
-    final NfcDataState<String> state;
-    try {
-      state = await _platform.getPlatformName();
-    } catch (_) {
-      throw const UnknownNfcException('Failed to get platform name');
-    }
-
+    final state = await _platform.getPlatformName();
     switch (state) {
       case final NfcDataSuccess<String> nfcDataSuccess:
         return nfcDataSuccess.data;
       case final NfcDataFailure<String> nfcDataFailure:
-        switch (nfcDataFailure.code) {
-          case UnsupportedNfcFeatureException.code:
-            throw UnsupportedNfcFeatureException(nfcDataFailure.message);
-          default:
-            throw UnknownNfcException(nfcDataFailure.message);
-        }
+        throw UnsupportedFeatureException(nfcDataFailure.message);
     }
   }
 
   /// Returns [NfcAntennaResponse] representing the NFC antenna information.
   ///
   /// Throws:
-  /// - [UnsupportedNfcFeatureException] if the platform does not support NFC.
+  /// - [UnsupportedFeatureException] if the platform does not support feature.
   /// - [NfcUnavailableException] if NFC is not available on the device.
   /// - [NfcDisabledException] if NFC is disabled on the device.
-  /// - [UnknownNfcException] if the unknown platform error occurs.
   Future<NfcAntennaResponse> getNfcAntennaInfo() async {
-    final NfcDataState<NfcAntennaResponse> state;
-    try {
-      state = await _platform.getNfcAntennaInfo();
-    } catch (_) {
-      throw const UnknownNfcException('Failed to get NFC antenna info');
-    }
-
+    final state = await _platform.getNfcAntennaInfo();
     switch (state) {
       case final NfcDataSuccess<NfcAntennaResponse> nfcDataSuccess:
         return nfcDataSuccess.data;
       case final NfcDataFailure<NfcAntennaResponse> nfcDataFailure:
         switch (nfcDataFailure.code) {
-          case UnsupportedNfcFeatureException.code:
-            throw UnsupportedNfcFeatureException(nfcDataFailure.message);
+          case UnsupportedFeatureException.code:
+            throw UnsupportedFeatureException(nfcDataFailure.message);
           case NfcUnavailableException.code:
             throw NfcUnavailableException(nfcDataFailure.message);
           case NfcDisabledException.code:
             throw NfcDisabledException(nfcDataFailure.message);
           default:
-            throw UnknownNfcException(nfcDataFailure.message);
+            throw UnsupportedFeatureException(nfcDataFailure.message);
         }
     }
   }
