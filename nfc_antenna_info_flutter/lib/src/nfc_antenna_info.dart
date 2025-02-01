@@ -13,7 +13,9 @@ final class NfcAntennaInfo {
   NfcAntennaInfoFlutterPlatform get _platform =>
       NfcAntennaInfoFlutterPlatform.instance;
 
-  /// Returns `String` representing the platform name.
+  /// Gets the platform name.
+  ///
+  /// Returns [String] representing the platform name.
   ///
   /// Throws:
   /// - [UnsupportedFeatureException] if the platform does not support feature.
@@ -28,6 +30,8 @@ final class NfcAntennaInfo {
     }
   }
 
+  /// Gets the NFC antenna information.
+  ///
   /// Returns [NfcAntennaResponse] representing the NFC antenna information.
   ///
   /// Throws:

@@ -35,8 +35,10 @@ abstract class NfcAntennaInfoFlutterPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  /// When success returns the platform name as [String] wrapped in a
-  /// [NfcDataSuccess].
+  /// Gets the platform name.
+  ///
+  /// Returns the platform name as [String] wrapped in a [NfcDataSuccess] on
+  /// success.
   ///
   /// In case of failure returns a [NfcFailure] with the error code and other
   /// details wrapped in a [NfcDataFailure].
@@ -45,8 +47,10 @@ abstract class NfcAntennaInfoFlutterPlatform extends PlatformInterface {
   /// - `1`: Failed to get platform name.
   Future<NfcDataState<String>> getPlatformName();
 
-  /// When success returns the NFC antenna info as [NfcAntennaResponse] wrapped
-  /// in a [NfcDataSuccess].
+  /// Gets the NFC antenna info.
+  ///
+  /// Returns the NFC antenna info as [NfcAntennaResponse] wrapped in a
+  /// [NfcDataSuccess] on success.
   ///
   /// In case of failure returns a [NfcFailure] with the error code and other
   /// details wrapped in a [NfcDataFailure].
