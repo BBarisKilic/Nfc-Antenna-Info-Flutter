@@ -55,10 +55,11 @@ public final class NfcAntennaInfoWrapper {
       throw new UnsupportedFeatureException();
     }
 
+    final int deviceHeight = nfcAntennaInfo.getDeviceHeight();
     final List<Map<String, Object>> availableNfcAntennaMaps = nfcAntennaInfo
         .getAvailableNfcAntennas()
         .stream()
-        .map(antenna -> new AvailableNfcAntennaWrapper(antenna).toMap())
+        .map(antenna -> new AvailableNfcAntennaWrapper(antenna).toMap(deviceHeight))
         .filter(Objects::nonNull)
         .collect(Collectors.toList());
     if (availableNfcAntennaMaps.isEmpty()) {

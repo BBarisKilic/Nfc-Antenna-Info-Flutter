@@ -36,17 +36,21 @@ public final class AvailableNfcAntennaWrapper {
    * @return The map representation of the AvailableNfcAntenna object.
    * @throws UnsupportedFeatureException If the feature is not supported on the device.
    */
-  public Map<String, Object> toMap() {
+  public Map<String, Object> toMap(int deviceHeight) {
     if (availableNfcAntenna == null) {
       return null;
     }
     if (VERSION.SDK_INT < VERSION_CODES.UPSIDE_DOWN_CAKE) {
       throw new UnsupportedFeatureException();
     }
-
+    // The location on the Y axis is calculated by subtracting the location from the device height.
+    // This is required because the location provided by the API is from the bottom-left when the
+    // user is facing the screen, and the device orientation is in portrait mode but the Flutter
+    // plugin expects the location from the top-left.
+    final int locationY = deviceHeight - availableNfcAntenna.getLocationY();
     final Map<String, Object> availableNfcAntennaMap = new HashMap<>();
     availableNfcAntennaMap.put(LOCATION_X, availableNfcAntenna.getLocationX());
-    availableNfcAntennaMap.put(LOCATION_Y, availableNfcAntenna.getLocationY());
+    availableNfcAntennaMap.put(LOCATION_Y, locationY);
     return availableNfcAntennaMap;
   }
 }
