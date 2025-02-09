@@ -9,11 +9,13 @@ void main() {
   group('E2E', () {
     testWidgets('getNfcAntennaInfo', (tester) async {
       app.main();
-      final expectedWidget = find.byIcon(Icons.nfc);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Get NFC Antenna Location'));
       await tester.pumpFrames(
         const app.MyApp(),
         const Duration(seconds: 1),
       );
+      final expectedWidget = find.byIcon(Icons.nfc);
       await tester.ensureVisible(expectedWidget);
     });
   });
