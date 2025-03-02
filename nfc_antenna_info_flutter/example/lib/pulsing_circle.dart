@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const bool kIsTestEnv = bool.fromEnvironment('FLUTTIUM_TEST');
+
 class PulsingCircle extends StatefulWidget {
   const PulsingCircle({
     super.key,
@@ -27,6 +29,10 @@ class _PulsingCircleState extends State<PulsingCircle>
       duration: const Duration(seconds: 1),
     )..repeat();
     _animation = CurveTween(curve: Curves.easeInOut).animate(_controller);
+
+    if (kIsTestEnv) {
+      _controller.stop();
+    }
   }
 
   @override

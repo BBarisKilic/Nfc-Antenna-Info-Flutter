@@ -1,4 +1,4 @@
-name: check_platform_name
+name: check_nfc_antenna_info
 description: A custom action for Fluttium.
 version: 0.1.0+1
 

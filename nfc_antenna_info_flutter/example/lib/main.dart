@@ -34,8 +34,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    const padding = 64.0;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -43,25 +41,25 @@ class _HomePageState extends State<HomePage> {
           'NFC Locator',
         ),
       ),
-      body: Center(
-        child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 600),
-          child: nfcAntennaResponse == null
-              ? Center(
-                  child: ElevatedButton(
-                    onPressed: () async {
-                      final response = await nfcAntennaInfo.getNfcAntennaInfo();
-                      setState(() => nfcAntennaResponse = response);
-                    },
-                    child: const Text(
-                      'Get NFC Antenna Location',
-                    ),
-                  ),
-                )
-              : NfcAntennaLocationDetails(
-                  nfcAntennaResponse: nfcAntennaResponse!,
-                ),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: ElevatedButton(
+              onPressed: () async {
+                final response = await nfcAntennaInfo.getNfcAntennaInfo();
+                setState(() => nfcAntennaResponse = response);
+              },
+              child: const Text(
+                'Get NFC Antenna Location',
+              ),
+            ),
+          ),
+          if (nfcAntennaResponse != null)
+            NfcAntennaLocationDetails(
+              nfcAntennaResponse: nfcAntennaResponse!,
+            ),
+        ],
       ),
     );
   }

@@ -2,5 +2,5 @@ environment:
   fluttium: ">=0.1.0 <1.0.0"
 
 actions:
-  check_platform_name:
-    path: actions/check_platform_name
+  check_nfc_antenna_info:
+    path: actions/check_nfc_antenna_info
