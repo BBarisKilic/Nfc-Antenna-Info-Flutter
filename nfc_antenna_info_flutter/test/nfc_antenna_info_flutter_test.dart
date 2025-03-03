@@ -37,7 +37,7 @@ void main() {
           () async {
         when(
           () => nfcAntennaInfoFlutterPlatform.getPlatformName(),
-        ).thenAnswer((_) async => NfcDataFailure(any()));
+        ).thenAnswer((_) async => const NfcDataFailure(NfcFailure('')));
 
         expect(nfcAntennaInfo.getPlatformName, throwsException);
       });
