@@ -1,0 +1,14 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart';
+
+void main() {
+  group('$NfcAntenna', () {
+    test('supports value equality', () {
+      const response1 = NfcAntenna(locationX: 10, locationY: 20);
+      const response2 = NfcAntenna(locationX: 10, locationY: 20);
+
+      expect(response1, equals(response2));
+      expect(response1.props, equals([10, 20]));
+    });
+  });
+}

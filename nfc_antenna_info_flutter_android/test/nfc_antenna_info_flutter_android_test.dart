@@ -9,12 +9,13 @@ void main() {
   group('NfcAntennaInfoFlutterAndroid', () {
     const kPlatformName = 'Android';
     late NfcAntennaInfoFlutterAndroid nfcAntennaInfoFlutter;
-    late List<MethodCall> log;
+    final log = <MethodCall>[];
 
     setUp(() async {
       nfcAntennaInfoFlutter = NfcAntennaInfoFlutterAndroid();
-      log = <MethodCall>[];
     });
+
+    tearDown(log.clear);
 
     test('can be registered', () {
       NfcAntennaInfoFlutterAndroid.registerWith();

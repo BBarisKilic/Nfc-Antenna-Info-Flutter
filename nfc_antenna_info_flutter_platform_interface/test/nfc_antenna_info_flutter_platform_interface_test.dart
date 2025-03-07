@@ -16,16 +16,18 @@ final class NfcAntennaInfoFlutterMock extends NfcAntennaInfoFlutterPlatform {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+
   group('NfcAntennaInfoFlutterPlatformInterface', () {
     late NfcAntennaInfoFlutterPlatform nfcAntennaInfoFlutterPlatform;
 
     setUp(() {
       nfcAntennaInfoFlutterPlatform = NfcAntennaInfoFlutterMock();
-      NfcAntennaInfoFlutterPlatform.instance = nfcAntennaInfoFlutterPlatform;
     });
 
     group('getPlatformName', () {
       test('returns correct name', () async {
+        expect(NfcAntennaInfoFlutterPlatform.instance, isNotNull);
+        NfcAntennaInfoFlutterPlatform.instance = nfcAntennaInfoFlutterPlatform;
         expect(
           await NfcAntennaInfoFlutterPlatform.instance.getPlatformName(),
           equals(
