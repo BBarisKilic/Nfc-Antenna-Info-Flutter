@@ -71,12 +71,12 @@ class NfcAntennaLocationDetails extends StatelessWidget {
               Positioned(
                 left: nfcLocationFromLeft,
                 top: nfcLocationFromTop,
-                child: const PulsingCircle(
+                child: PulsingCircle(
                   size: pulseSize,
                   child: Icon(
                     Icons.nfc,
                     size: nfcIconSize,
-                    color: Colors.cyan,
+                    color: Theme.of(context).primaryColor,
                   ),
                 ),
               ),

@@ -60,9 +60,9 @@ class _PulsingCircleState extends State<PulsingCircle>
           },
           child: SizedBox.square(
             dimension: widget.size ?? 100,
-            child: const DecoratedBox(
+            child: DecoratedBox(
               decoration: BoxDecoration(
-                color: Colors.cyan,
+                color: Theme.of(context).primaryColor,
                 shape: BoxShape.circle,
               ),
             ),
