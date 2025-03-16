@@ -20,11 +20,11 @@ class NfcAntenna extends Equatable {
     );
   }
 
-  /// Location of the antenna on the X axis in millimeters. 0 is the bottom-left
+  /// Location of the antenna on the X axis in millimeters. 0 is the top-left
   /// when the user is facing the screen and the device orientation is Portrait.
   final int locationX;
 
-  /// Location of the antenna on the Y axis in millimeters. 0 is the bottom-left
+  /// Location of the antenna on the Y axis in millimeters. 0 is the top-left
   /// when the user is facing the screen and the device orientation is Portrait.
   final int locationY;
 
