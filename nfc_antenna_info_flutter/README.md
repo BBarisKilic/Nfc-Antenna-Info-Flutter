@@ -13,7 +13,9 @@ Developed with 💙 by [BBK Development][bbk_development_link]
 
 A [Flutter][flutter_dev_link] plugin for retrieving precise NFC antenna information to accurately locate NFC chips on Android 14 and newer devices.
 
-![nfc_antenna_info_flutter_gif_1][nfc_antenna_info_flutter_gif_1]
+<p align="center">
+    <img src="https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/blob/main/nfc_antenna_info_flutter/art/nfc_antenna_info_flutter_gif_1.gif?raw=true" width="300">
+</p>
 
 ## Features
 
@@ -62,7 +64,6 @@ Please file feature requests and bugs at the [issue tracker][nfc_antenna_info_fl
 [very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
 [bbk_development_link]: https://github.com/BBKDevelopment
 [flutter_dev_link]: https://flutter.dev/
-[nfc_antenna_info_flutter_gif_1]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/blob/main/nfc_antenna_info_flutter/art/nfc_antenna_info_flutter_gif_1.gif?raw=true
 [nfc_antenna_info_flutter_github_link]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/tree/main/nfc_antenna_info_flutter
 [nfc_antenna_info_flutter_issue_link]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/issues
 [maintainer_one_link]: https://github.com/BBarisKilic
