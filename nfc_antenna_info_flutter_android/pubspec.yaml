@@ -1,7 +1,7 @@
 name: nfc_antenna_info_flutter_android
 description: Android implementation of the nfc_antenna_info_flutter plugin
-version: 0.1.0+1
-publish_to: 'none'
+repository: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/tree/main/nfc_antenna_info_flutter_android
+version: 1.0.0
 
 environment:
   sdk: ^3.5.0
@@ -21,8 +21,7 @@ dependencies:
   # A package that provides annotations for expressing developer intentions that cannot be inferred
   # through static code analysis.
   meta: ^1.15.0
-  nfc_antenna_info_flutter_platform_interface:
-    path: ../nfc_antenna_info_flutter_platform_interface
+  nfc_antenna_info_flutter_platform_interface: ^1.0.0
 
 dev_dependencies:
   flutter_test:
