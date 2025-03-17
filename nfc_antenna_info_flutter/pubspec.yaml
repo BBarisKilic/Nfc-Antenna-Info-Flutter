@@ -1,5 +1,5 @@
 name: nfc_antenna_info_flutter
-description: A Very Good Project created by Very Good CLI.
+description: Flutter plugin for retrieving precise NFC antenna information to accurately locate NFC chips on devices.
 repository: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/tree/main/nfc_antenna_info_flutter
 version: 1.0.0
 
