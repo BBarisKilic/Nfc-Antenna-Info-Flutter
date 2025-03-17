@@ -5,7 +5,7 @@
 [![nfc_antenna_info_flutter][build_status_badge]][workflow_link]
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![License: MIT][license_badge]][license_link]
+[![License: BSD-3-Clause][license_badge]][license_link]
 
 </div>
 
@@ -69,9 +69,9 @@ Please file feature requests and bugs at the [issue tracker][nfc_antenna_info_fl
 
 [coverage_badge]: coverage_badge.svg
 
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[license_badge]: https://img.shields.io/badge/license-BSD--3--Clause-blue.svg
 
-[license_link]: https://opensource.org/licenses/MIT
+[license_link]: https://opensource.org/license/BSD-3-Clause
 
 [very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
 
