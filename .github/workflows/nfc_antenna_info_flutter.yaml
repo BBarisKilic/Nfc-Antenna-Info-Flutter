@@ -61,8 +61,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-            flutter clean
-            flutter pub get
+          flutter clean
+          flutter pub get
 
       - name: Install Fluttium
         run: flutter pub global activate fluttium_cli
@@ -100,5 +100,7 @@ jobs:
           arch: x86_64
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          script: fluttium test flows/test_nfc_location.yaml -d android --dart-define=FLUTTIUM_TEST=true
+          script: |
+            adb uninstall com.bbkdevelopment.example || true
+            fluttium test flows/test_nfc_location.yaml -d android --dart-define=FLUTTIUM_TEST=true
           working-directory: nfc_antenna_info_flutter/example
