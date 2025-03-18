@@ -1,3 +1,3 @@
-# 0.1.0+1
+# 1.0.0
 
-- Initial release of this plugin.
+* feat: initial release of `nfc_antenna_info_flutter_android` 🎉
