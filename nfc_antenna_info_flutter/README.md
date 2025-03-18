@@ -15,8 +15,8 @@ locate NFC chips on Android 14 and newer devices.
 <div align="center">
 
 |         | Android | iOS |
-|---------|---------|-----|
-| Support | SDK 34+ | ❌   |
+|:-------:|:-------:|:---:|
+| Support | SDK 34+ |  ❌  |
 
 <img src="https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/blob/main/nfc_antenna_info_flutter/art/nfc_antenna_info_flutter_gif_1.gif?raw=true" width="300">
 
@@ -28,6 +28,15 @@ Developed with 💙 by [BBK Development][bbk_development_link]
 
 Provides a straightforward API to gather detailed information about all available NFC antennas on
 Android devices. It also delivers device-specific details relevant to the positioning of antennas.
+
+## Requirements
+
+- Flutter >=3.24.0
+- Dart >=3.5.0
+- Android `compileSDK` 34
+- Java 17
+- Android Gradle Plugin >=8.2.0
+- Gradle wrapper >=8.3
 
 ## Public Methods
 

@@ -15,8 +15,8 @@ locate NFC chips on Android 14 and newer devices.
 <div align="center">
 
 |         | Android | iOS |
-|---------|---------|-----|
-| Support | SDK 34+ | ❌   |
+|:-------:|:-------:|:---:|
+| Support | SDK 34+ |  ❌  |
 
 <img src="https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/blob/main/nfc_antenna_info_flutter/art/nfc_antenna_info_flutter_gif_1.gif?raw=true" width="300">
 
