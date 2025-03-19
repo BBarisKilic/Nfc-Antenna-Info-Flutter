@@ -23,7 +23,7 @@ locate NFC chips on Android 14 and newer devices.
 Provides a straightforward API to gather detailed information about all available NFC antennas on
 Android devices. It also delivers device-specific details relevant to the positioning of antennas.
 
-## Platform Support
+## Platform support
 
 |         | Android | iOS |
 |:-------:|:-------:|:---:|
@@ -38,7 +38,7 @@ Android devices. It also delivers device-specific details relevant to the positi
 - Android Gradle Plugin >=8.2.0
 - Gradle wrapper >=8.3
 
-## Public Methods
+## Public methods
 
 | Return Type                  | Method Name         | Description                       | Throws                                                                                                                                                                                                            |
 |------------------------------|---------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
