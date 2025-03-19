@@ -22,12 +22,6 @@ locate NFC chips on Android 14 and newer devices.
 
 </div>
 
-## Platform Support
-
-|         | Android | iOS |
-|:-------:|:-------:|:---:|
-| Support | SDK 34+ |  ❌  |
-
 ## Federated plugins
 
 | Name                                                                                            | Version | Status                                                                                                                                                                      |
