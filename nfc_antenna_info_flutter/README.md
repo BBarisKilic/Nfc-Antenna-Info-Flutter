@@ -2,6 +2,7 @@
 
 <div align="center">
 
+[![pub package][nfc_antenna_info_flutter_pub_dev_badge]][nfc_antenna_info_flutter_pub_dev]
 [![nfc_antenna_info_flutter][build_status_badge]][workflow_link]
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
@@ -71,6 +72,10 @@ Please file feature requests and bugs at the [issue tracker][nfc_antenna_info_fl
 ## Maintainers
 
 - [Bulent Baris Kilic][maintainer_one_link]
+
+[nfc_antenna_info_flutter_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter.svg
+
+[nfc_antenna_info_flutter_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter
 
 [build_status_badge]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/actions/workflows/nfc_antenna_info_flutter.yaml/badge.svg
 
