@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:check_nfc_antenna_info/check_nfc_antenna_info.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -28,7 +26,7 @@ void main() {
     });
 
     test('executes returns true if node was found', () async {
-      final action = CheckNfcAntennaInfo();
+      const action = CheckNfcAntennaInfo();
 
       expect(await action.execute(tester), isTrue);
     });
@@ -36,7 +34,7 @@ void main() {
     test('executes returns false if node was not found', () async {
       when(() => tester.find(any())).thenAnswer((_) async => null);
 
-      final action = CheckNfcAntennaInfo();
+      const action = CheckNfcAntennaInfo();
 
       expect(await action.execute(tester), isFalse);
     });
