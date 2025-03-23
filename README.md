@@ -2,7 +2,6 @@
 
 <div align="center">
 
-[![pub package][nfc_antenna_info_flutter_pub_dev_badge]][nfc_antenna_info_flutter_pub_dev]
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: BSD-3-Clause][license_badge]][license_link]
@@ -39,18 +38,6 @@ Please file feature requests and bugs at the [issue tracker][nfc_antenna_info_fl
 
 - [Bulent Baris Kilic][maintainer_one_link]
 
-[nfc_antenna_info_flutter_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter.svg
-
-[nfc_antenna_info_flutter_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter
-
-[nfc_antenna_info_flutter_android_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter_android.svg
-
-[nfc_antenna_info_flutter_android_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter_android
-
-[nfc_antenna_info_flutter_platform_interface_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter_platform_interface.svg
-
-[nfc_antenna_info_flutter_platform_interface_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter_platform_interface
-
 [coverage_badge]: nfc_antenna_info_flutter/coverage_badge.svg
 
 [license_badge]: https://img.shields.io/badge/license-BSD--3--Clause-blue.svg
@@ -67,17 +54,29 @@ Please file feature requests and bugs at the [issue tracker][nfc_antenna_info_fl
 
 [nfc_antenna_info_flutter_link]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/tree/main/nfc_antenna_info_flutter
 
+[nfc_antenna_info_flutter_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter.svg
+
+[nfc_antenna_info_flutter_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter
+
 [nfc_antenna_info_flutter_build_status_badge]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/actions/workflows/nfc_antenna_info_flutter.yaml/badge.svg
 
 [nfc_antenna_info_flutter_workflow_link]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/actions/workflows/nfc_antenna_info_flutter.yaml
 
 [nfc_antenna_info_flutter_android_link]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/tree/main/nfc_antenna_info_flutter_android
 
+[nfc_antenna_info_flutter_android_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter_android.svg
+
+[nfc_antenna_info_flutter_android_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter_android
+
 [nfc_antenna_info_flutter_android_build_status_badge]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/actions/workflows/nfc_antenna_info_flutter_android.yaml/badge.svg
 
 [nfc_antenna_info_flutter_android_workflow_link]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/actions/workflows/nfc_antenna_info_flutter_android.yaml
 
 [nfc_antenna_info_flutter_platform_interface_link]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/tree/main/nfc_antenna_info_flutter_platform_interface
+
+[nfc_antenna_info_flutter_platform_interface_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter_platform_interface.svg
+
+[nfc_antenna_info_flutter_platform_interface_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter_platform_interface
 
 [nfc_antenna_info_flutter_platform_interface_build_status_badge]: https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/actions/workflows/nfc_antenna_info_flutter_platform_interface.yaml/badge.svg
 
