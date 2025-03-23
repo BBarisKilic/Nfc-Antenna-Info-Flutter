@@ -25,11 +25,11 @@ locate NFC chips on Android 14 and newer devices.
 
 ## Federated plugins
 
-| Name                                                                                            | Version | Status                                                                                                                                                                      |
-|-------------------------------------------------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [nfc_antenna_info_flutter][nfc_antenna_info_flutter_link]                                       | 1.0.0   | [![nfc_antenna_info_flutter][nfc_antenna_info_flutter_build_status_badge]][nfc_antenna_info_flutter_workflow_link]                                                          |
-| [nfc_antenna_info_flutter_android][nfc_antenna_info_flutter_android_link]                       | 1.0.0   | [![nfc_antenna_info_flutter_android][nfc_antenna_info_flutter_android_build_status_badge]][nfc_antenna_info_flutter_android_workflow_link]                                  |
-| [nfc_antenna_info_flutter_platform_interface][nfc_antenna_info_flutter_platform_interface_link] | 1.0.0   | [![nfc_antenna_info_flutter_platform_interface][nfc_antenna_info_flutter_platform_interface_build_status_badge]][nfc_antenna_info_flutter_platform_interface_workflow_link] |
+| Plugin                                                                                          | Version                                                                                                                          | Status                                                                                                                                                                      |
+|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [nfc_antenna_info_flutter][nfc_antenna_info_flutter_link]                                       | [![pub package][nfc_antenna_info_flutter_pub_dev_badge]][nfc_antenna_info_flutter_pub_dev]                                       | [![nfc_antenna_info_flutter][nfc_antenna_info_flutter_build_status_badge]][nfc_antenna_info_flutter_workflow_link]                                                          |
+| [nfc_antenna_info_flutter_android][nfc_antenna_info_flutter_android_link]                       | [![pub package][nfc_antenna_info_flutter_android_pub_dev_badge]][nfc_antenna_info_flutter_android_pub_dev]                       | [![nfc_antenna_info_flutter_android][nfc_antenna_info_flutter_android_build_status_badge]][nfc_antenna_info_flutter_android_workflow_link]                                  |
+| [nfc_antenna_info_flutter_platform_interface][nfc_antenna_info_flutter_platform_interface_link] | [![pub package][nfc_antenna_info_flutter_platform_interface_pub_dev_badge]][nfc_antenna_info_flutter_platform_interface_pub_dev] | [![nfc_antenna_info_flutter_platform_interface][nfc_antenna_info_flutter_platform_interface_build_status_badge]][nfc_antenna_info_flutter_platform_interface_workflow_link] |
 
 ## Feature requests and bugs
 
@@ -42,6 +42,14 @@ Please file feature requests and bugs at the [issue tracker][nfc_antenna_info_fl
 [nfc_antenna_info_flutter_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter.svg
 
 [nfc_antenna_info_flutter_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter
+
+[nfc_antenna_info_flutter_android_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter_android.svg
+
+[nfc_antenna_info_flutter_android_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter_android
+
+[nfc_antenna_info_flutter_platform_interface_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter_platform_interface.svg
+
+[nfc_antenna_info_flutter_platform_interface_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter_platform_interface
 
 [coverage_badge]: nfc_antenna_info_flutter/coverage_badge.svg
 
