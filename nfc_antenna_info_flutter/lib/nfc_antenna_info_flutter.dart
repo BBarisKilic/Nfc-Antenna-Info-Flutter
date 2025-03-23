@@ -9,7 +9,7 @@
 /// API level 34 (Android 14 - Upside Down Cake).
 ///
 /// Get started at [https://pub.dev/packages/nfc_antenna_info_flutter].
-library nfc_antenna_info_flutter;
+library;
 
 export 'package:nfc_antenna_info_flutter_platform_interface/nfc_antenna_info_flutter_platform_interface.dart'
     show NfcAntenna, NfcAntennaResponse;
