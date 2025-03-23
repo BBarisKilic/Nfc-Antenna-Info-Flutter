@@ -2,6 +2,7 @@
 
 <div align="center">
 
+[![pub package][nfc_antenna_info_flutter_pub_dev_badge]][nfc_antenna_info_flutter_pub_dev]
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: BSD-3-Clause][license_badge]][license_link]
@@ -18,7 +19,7 @@ locate NFC chips on Android 14 and newer devices.
 |:-------:|:-------:|:---:|
 | Support | SDK 34+ |  ❌  |
 
-<img src="https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/blob/main/nfc_antenna_info_flutter/art/nfc_antenna_info_flutter_gif_1.gif?raw=true" width="300">
+<img src="https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/blob/main/nfc_antenna_info_flutter/art/nfc_antenna_info_flutter_gif_1.gif?raw=true" width="194">
 
 </div>
 
@@ -37,6 +38,10 @@ Please file feature requests and bugs at the [issue tracker][nfc_antenna_info_fl
 ## Maintainers
 
 - [Bulent Baris Kilic][maintainer_one_link]
+
+[nfc_antenna_info_flutter_pub_dev_badge]: https://img.shields.io/pub/v/nfc_antenna_info_flutter.svg
+
+[nfc_antenna_info_flutter_pub_dev]: https://pub.dev/packages/nfc_antenna_info_flutter
 
 [coverage_badge]: nfc_antenna_info_flutter/coverage_badge.svg
 
