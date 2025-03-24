@@ -22,7 +22,7 @@ dependencies:
   # A package that provides annotations for expressing developer intentions that cannot be inferred
   # through static code analysis.
   meta: ^1.15.0
-  nfc_antenna_info_flutter_platform_interface: ^1.0.0
+  nfc_antenna_info_flutter_platform_interface: ^1.0.1
 
 dev_dependencies:
   flutter_test:
