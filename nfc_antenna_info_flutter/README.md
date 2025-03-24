@@ -13,6 +13,15 @@
 A [Flutter][flutter_dev_link] plugin for retrieving precise NFC antenna information to accurately
 locate NFC chips on Android 14 and newer devices.
 
+This plugin is ideal for Flutter developers building apps that depend on accurate NFC
+interactions—such as contactless payments, access control, or device pairing. By providing detailed
+NFC antenna location data on supported Android devices (Android 14+), it helps ensure optimal
+alignment between devices, leading to a smoother user experience and fewer failed NFC reads or
+connections.
+
+It's especially useful for apps in retail, logistics, IoT, and any domain where NFC precision
+directly impacts performance.
+
 <div align="center">
 
 <img src="https://github.com/BBarisKilic/Nfc-Antenna-Info-Flutter/blob/main/nfc_antenna_info_flutter/art/nfc_antenna_info_flutter_gif_1.gif?raw=true" width="300">
